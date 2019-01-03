@@ -1,14 +1,21 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Home
     </ion-title>
+    <ion-buttons end>
+        <button ion-button (click)="logout()">Login</button>
+      </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div *ngIf="givenName">
+    <hr>
+    <p>You are logged in as: <b>{{ givenName }}</b></p>
+    <div class="claims">
+      <strong>Claims from Identity Token JWT:</strong>
+      <pre>{{claims | json}}</pre>
+    </div>
+  </div>
 </ion-content>

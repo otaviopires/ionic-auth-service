@@ -1,6 +1,5 @@
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginPage } from './../pages/login/login';
 import { LoginPageModule } from '../pages/login/login.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -17,7 +16,6 @@ import { OAuthService, UrlHelperService, OAuthModule } from 'angular-oauth2-oidc
   declarations: [
     MyApp,
     HomePage,
-    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +29,6 @@ import { OAuthService, UrlHelperService, OAuthModule } from 'angular-oauth2-oidc
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage
   ],
   providers: [
     StatusBar,
